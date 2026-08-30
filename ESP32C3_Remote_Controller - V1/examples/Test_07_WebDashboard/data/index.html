@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP32 Console - שלט חי</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>שלט - תצוגה חיה</h1>
+      <div id="status" class="status disconnected">מנותק</div>
+    </header>
+
+    <div class="panel controller-panel">
+      <h2>מיפוי השלט</h2>
+      <div class="controller-mockup">
+        <div class="joystick-mount">
+          <div class="joystick-knob" id="joystickKnob"></div>
+        </div>
+        <div class="oled-mockup" id="oledMockup">OLED</div>
+        <div class="mpu-mockup">MPU</div>
+        <div class="led-row">
+          <div class="led-dot" id="led0"></div>
+          <div class="led-dot" id="led1"></div>
+          <div class="led-dot" id="led2"></div>
+          <div class="led-dot" id="led3"></div>
+          <div class="led-dot" id="led4"></div>
+        </div>
+        <div class="speaker-mockup" id="motorVibration">🔊</div>
+        <div class="key key-yellow" id="key1">KEY1</div>
+        <div class="key key-red" id="key2">KEY2</div>
+      </div>
+
+      <details class="board-photo-details" open>
+        <summary>תמונת הלוח האמיתי</summary>
+        <img class="board-photo" src="board.jpg" alt="תמונת הלוח הפיזי - CS-NETA-WiFi">
+      </details>
+    </div>
+
+    <div class="main-grid">
+      <div class="panel">
+        <h2>מתח הסוללה</h2>
+        <div class="battery-display">
+          <div class="battery-meter">
+            <div class="battery-bar" id="batteryBar"></div>
+          </div>
+          <div class="battery-reading" id="batteryReading">4.20V</div>
+          <div class="battery-status" id="batteryStatus">טעונה</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>הטיה (Tilt)</h2>
+        <canvas id="horizon" width="140" height="140"></canvas>
+        <div class="readout">ערך גולמי: <span id="tiltValue">0</span></div>
+      </div>
+
+      <div class="panel">
+        <h2>ג'ויסטיק</h2>
+        <div class="dpad">
+          <div class="btn" id="btnUp">↑</div>
+          <div class="btn-row">
+            <div class="btn" id="btnLeft">→</div>
+            <div class="btn" id="btnSelect">SEL</div>
+            <div class="btn" id="btnRight">←</div>
+          </div>
+          <div class="btn" id="btnDown">↓</div>
+        </div>
+        <div class="attack-indicator" id="attackIndicator">ATTACK</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
