@@ -65,7 +65,7 @@ ESP32C3_Remote_Controller/
 | לדים WS2812B (x4 בשרשור) | LEDS (data in) | IO1 |
 | — | פנוי/s# ESP32C3 Remote Controller
 
-פרויקט שלט מבוסס ESP32-C3 (לוח "ESP32-C3 0.42 OLED" מ-AliExpress) עם:
+פרויקט שלט מבוסס ESP32-C3 (לוח "ESP32-C3 0.42 OLED") עם:
 מסך OLED 0.42", MPU6050 (ג'יירו/אקסלרומטר), ג'ויסטיק אנלוגי, מנוע רטט,
 4 לדים RGB (WS2812B), ושני כפתורים (SW_LEFT / SW_RIGHT).
 
